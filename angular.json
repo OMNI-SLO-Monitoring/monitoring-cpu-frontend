@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "monitoring-cpu-frontend"
+    }
+  },
+  "defaultProject": "monitoring-cpu-frontend",
+  "cli": {
+    "analytics": "02bc2b29-9e5e-4a36-b4ec-bb052dfaabb5"
+  }
 }

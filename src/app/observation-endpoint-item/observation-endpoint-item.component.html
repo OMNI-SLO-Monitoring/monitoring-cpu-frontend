@@ -1,0 +1,20 @@
+<div class="card m-3">
+    <div class="card-body">
+        <div class="row p-3">
+            <h2 class="card-title" style="flex-grow: 1;">{{observationEndpoint.name}}</h2>
+            <div *ngIf="status | async; let s">
+                <h2>{{s.cpuLoad}}%</h2>
+            </div>
+        </div>
+        <h5 class="card-subtitle">{{observationEndpoint.cpuUtilQueryEndpoint}}</h5>
+        <hr>
+        <p>Critical Load Threshold: {{observationEndpoint.criticalCpuUtilThreshold}}</p>
+        <p>Query Frequency: {{observationEndpoint.cpuObservationFrequencyMilis}}</p>
+        <hr>
+        <div *ngIf="status | async; let s">
+            <div class="alert alert-warning" role="alert">
+                {{s.message}}
+            </div>
+        </div>
+    </div>
+</div>
