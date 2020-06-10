@@ -17,4 +17,15 @@
             </div>
         </div>
     </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-secondary"  data-toggle="modal" (click)="open()" data-target="#observationEndpoint">Edit</button>
+        <button type="submit" class="btn btn-danger" (click)="deleteEndpoint()">Delete</button>
+    </div>
 </div>
+
+<div class="modal fade" id="modal{{observationEndpoint.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <app-edit-observation-endpoint
+        (submit)="updateEndpoint($event)"
+        [endpoint]="observationEndpoint">
+    </app-edit-observation-endpoint>
+<div></div>
