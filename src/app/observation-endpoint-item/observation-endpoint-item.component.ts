@@ -19,6 +19,7 @@ export class ObservationEndpointItemComponent implements OnInit {
   constructor(private socket: Socket, private endpointService: EndpoitsService) { }
 
   ngOnInit(): void {
+    // Establish Socket connection with backend
     this.status = this.socket.fromEvent(this.observationEndpoint.id);
   }
 
@@ -35,7 +36,10 @@ export class ObservationEndpointItemComponent implements OnInit {
     this.endpointService.deleteEndpoint(this.observationEndpoint);
   }
 
-  // This is a to open the right modal, because we have multiple modals wich needs different ids
+  /*
+    Opens the editModal with jQuery
+    Modals uses the endpointId because otherwise it would open the first modal with the given id in the DOM, which is not nessecary the one corresponding to this oberservation-endpoint-item
+  */
   open() {
     $(`#modal${this.observationEndpoint.id}`).modal('show');
   }

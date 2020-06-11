@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CpuObservationEndpoint } from 'cpu-monitoring-models';
-import { HttpClient } from '@angular/common/http';
-import { FormBuilder } from '@angular/forms';
 import { EndpoitsService } from '../endpoits.service';
 
 @Component({
@@ -21,7 +19,6 @@ export class ObservationEndpointListComponent {
       endpoitData.threshold,
       endpoitData.frequency
     );
-    console.log("addd", endpoint);
     this.endpointService.addEndpoint(endpoint);
   }
 }

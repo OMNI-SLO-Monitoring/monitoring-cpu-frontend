@@ -14,14 +14,7 @@ export class EditObservationEndpointComponent implements OnInit {
   @Input() endpoint: CpuObservationEndpoint;
   @Output() submit = new EventEmitter();
 
-  constructor(private formBuilder: FormBuilder) {
-    // this.newEndpointForm = this.formBuilder.group({
-    //   name: '',
-    //   endpoint: '',
-    //   threshold: '',
-    //   frequency: '',
-    // })
-  }
+  constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     if (!this.endpoint) {
@@ -42,7 +35,6 @@ export class EditObservationEndpointComponent implements OnInit {
   }
 
   onSubmit(endpointData) {
-    console.log("submit")
     this.submit.emit(endpointData);
     this.newEndpointForm.reset();
   }
