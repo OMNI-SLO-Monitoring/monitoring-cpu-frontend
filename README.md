@@ -2,7 +2,7 @@
 
 Frontend for Monitoring-CPU-Useage Service. Provides the ability to add/edit/delete CpuObersvationEndpoints, wich the Monitoring-CPU-Useage Service should observe.
 
-![alt text](https://https://github.com/ccims/monitoring-cpu-frontend/blob/master/readme-screenshot.png?raw=true)
+![Frontend for Monitoring-CPU-Useage Service Screenshot](https://github.com/ccims/monitoring-cpu-frontend/blob/master/readme-screenshot.png)
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
