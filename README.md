@@ -1,4 +1,4 @@
-# MonitoringCpuFrontend
+# MonitoringCpuFrontend [Depricated]
 
 Frontend for Monitoring-CPU-Useage Service. Provides the ability to add/edit/delete CpuObersvationEndpoints, wich the Monitoring-CPU-Useage Service should observe. Communicates with Monitoring-CPU-Useage Service via Sockets, to recieve the latest Cpu Status for each CpuObservationEndpoint.
 
